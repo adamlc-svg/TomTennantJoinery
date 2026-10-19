@@ -1,317 +1,367 @@
 <!doctype html>
-<html lang="en-GB" data-palette="oak" data-font="fraunces">
+<html lang="en-GB" data-palette="walnut" data-font="jakarta">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tom Tennant Carpentry</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Tom Tennant Carpentry – bespoke joinery, kitchens, staircases, doors and fitted furniture. Request a free quotation.">
+<meta name="description" content="Tom Tennant Carpentry – bespoke carpentry and joinery: kitchens, staircases, doors and fitted furniture. Request a free quotation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Nunito:wght@400..800&family=Quicksand:wght@500..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400..800&family=Outfit:wght@400..800&family=Plus+Jakarta+Sans:wght@400..800&display=swap">
 <style>
-/* Layout: one long page — photo hero, then alternating plain and timber-toned bands. */
+/* Layout: dark photo hero with a framed feature image, then calm bordered sections on one background. */
 
 /* ---------- Colour schemes (pick one, delete the rest when decided) ---------- */
-:root, :root[data-palette="oak"] {
-  --bg: #f6efe4; --surface: #ece0cc; --band: #e3d3b8;
-  --ink: #33251a; --muted: #6e5a47; --line: #d6c3a5;
-  --accent: #8b5a2b; --accent-ink: #fff8ef; --accent-2: #5f7150;
-  --wood-1: #c9a273; --wood-2: #a87b4b;
-  --dark: #2e2117; --on-dark: #f3e8d8;
-  color-scheme: light;
-}
-:root[data-palette="walnut"] {
-  --bg: #241912; --surface: #2f2118; --band: #3a291d;
-  --ink: #f1e4d2; --muted: #c4ad93; --line: #4d3727;
-  --accent: #d0904f; --accent-ink: #241912; --accent-2: #9db08a;
-  --wood-1: #6b4a32; --wood-2: #4a3121;
-  --dark: #170f0a; --on-dark: #f1e4d2;
+:root, :root[data-palette="walnut"] {
+  --accent-dark-bg: #d6a86f;
+  --bg: #13100d; --surface: #1b1612; --surface-2: #231c17; --line: #33291f;
+  --ink: #f3ece3; --muted: #a8998a; --accent: #d6a86f; --accent-ink: #1a120b;
+  --ph-1: #3a2b1f; --ph-2: #261c14;
   color-scheme: dark;
 }
-:root[data-palette="pine"] {
-  --bg: #f1f2ea; --surface: #e2e6d6; --band: #d5dcc4;
-  --ink: #1f2b22; --muted: #57655a; --line: #c4ccb4;
-  --accent: #2f5b3c; --accent-ink: #f4f6ee; --accent-2: #b07a43;
-  --wood-1: #d2b384; --wood-2: #b08a58;
-  --dark: #1c2a20; --on-dark: #e9eedf;
+:root[data-palette="oak"] {
+  --accent-dark-bg: #dcab74;
+  --bg: #faf7f2; --surface: #ffffff; --surface-2: #f3ede4; --line: #e5dccf;
+  --ink: #1e1712; --muted: #6d6054; --accent: #95602f; --accent-ink: #ffffff;
+  --ph-1: #cdb291; --ph-2: #a9875f;
   color-scheme: light;
+}
+:root[data-palette="pine"] {
+  --accent-dark-bg: #a9c9a4;
+  --bg: #f6f7f3; --surface: #ffffff; --surface-2: #eceee6; --line: #dce0d3;
+  --ink: #17201a; --muted: #5b665e; --accent: #2e5a3b; --accent-ink: #ffffff;
+  --ph-1: #c9b693; --ph-2: #a38e68;
+  color-scheme: light;
+}
+:root[data-palette="charcoal"] {
+  --accent-dark-bg: #c9b089;
+  --bg: #121314; --surface: #1a1b1d; --surface-2: #222326; --line: #2e3033;
+  --ink: #eeece8; --muted: #9d9a94; --accent: #c9b089; --accent-ink: #15130f;
+  --ph-1: #3b352d; --ph-2: #24211d;
+  color-scheme: dark;
 }
 :root[data-palette="cedar"] {
-  --bg: #f8eee7; --surface: #efdccf; --band: #e6cbb8;
-  --ink: #3a1e16; --muted: #75503f; --line: #ddbfab;
-  --accent: #a24d2c; --accent-ink: #fff6f0; --accent-2: #3f5a5c;
-  --wood-1: #c98e66; --wood-2: #a26a46;
-  --dark: #34190f; --on-dark: #f6e6da;
-  color-scheme: light;
-}
-:root[data-palette="ash"] {
-  --bg: #f3f1ed; --surface: #e7e3dc; --band: #dcd6cc;
-  --ink: #2a2825; --muted: #66605a; --line: #d0c9be;
-  --accent: #3d3a36; --accent-ink: #f6f3ee; --accent-2: #9a7b55;
-  --wood-1: #d9cbb4; --wood-2: #b9a689;
-  --dark: #262421; --on-dark: #eeeae3;
+  --accent-dark-bg: #e39a76;
+  --bg: #fbf6f2; --surface: #ffffff; --surface-2: #f4e9e1; --line: #e8d8cc;
+  --ink: #2a1610; --muted: #74574a; --accent: #9c4626; --accent-ink: #ffffff;
+  --ph-1: #c99a78; --ph-2: #9f6c4c;
   color-scheme: light;
 }
 
 /* ---------- Fonts (pick one) ---------- */
-:root, :root[data-font="fraunces"] {
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Nunito", "Segoe UI", system-ui, sans-serif;
-  --display-weight: 600;
-}
-:root[data-font="nunito"] {
-  --font-display: "Nunito", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Nunito", "Segoe UI", system-ui, sans-serif;
-  --display-weight: 800;
-}
-:root[data-font="quicksand"] {
-  --font-display: "Quicksand", "Trebuchet MS", system-ui, sans-serif;
-  --font-body: "Nunito", "Segoe UI", system-ui, sans-serif;
-  --display-weight: 700;
-}
+:root, :root[data-font="jakarta"] { --font: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif; }
+:root[data-font="manrope"] { --font: "Manrope", "Segoe UI", system-ui, sans-serif; }
+:root[data-font="outfit"] { --font: "Outfit", "Segoe UI", system-ui, sans-serif; }
 
-:root { --radius: 14px; --max: 1160px; --on-photo: #fffaf2; }
+:root {
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r-lg: 14px; --r: 10px; --r-sm: 6px; --max: 1180px;
+  --on-photo: #f7f2ea; --on-photo-muted: rgba(247,242,234,.72);
+}
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
-  font-family: var(--font-body); font-size: 17px; line-height: 1.65;
+  font-family: var(--font); font-size: 16.5px; line-height: 1.65;
   -webkit-font-smoothing: antialiased; overflow-x: hidden;
 }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--bg); }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: var(--display-weight); line-height: 1.15; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
-h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); }
-h3 { font-size: 1.25rem; }
+h1, h2, h3 { font-weight: 800; line-height: 1.08; margin: 0; letter-spacing: -0.03em; text-wrap: balance; }
+h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); }
+h3 { font-size: 1.2rem; letter-spacing: -0.015em; line-height: 1.25; }
 p { margin: 0; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.accent { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 .wrap {
   max-width: var(--max); margin: 0 auto;
   padding-left: max(20px, env(safe-area-inset-left, 0px));
   padding-right: max(20px, env(safe-area-inset-right, 0px));
 }
-section { padding-block: clamp(64px, 9vw, 110px); }
-.eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
-.section-head { display: grid; gap: 12px; max-width: 640px; margin-bottom: 44px; }
-.section-head p { color: var(--muted); }
+section { padding-block: clamp(72px, 10vw, 120px); }
+section + section { border-top: 1px solid var(--line); }
+
+/* Small technical labels — the "measured" detail that makes it feel professional */
+.label { font-family: var(--mono); font-size: .74rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.meta { font-family: var(--mono); font-size: .74rem; letter-spacing: .06em; color: var(--muted); }
+.chip {
+  display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: .7rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; padding: 6px 10px; border-radius: var(--r-sm);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+.chip.plain { color: var(--muted); border-color: var(--line); background: transparent; }
+
+.section-head { display: grid; gap: 14px; max-width: 680px; margin-bottom: 52px; }
+.section-head p { color: var(--muted); font-size: 1.05rem; max-width: 58ch; }
+.head-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 40px; margin-bottom: 44px; }
+.head-row .section-head { margin-bottom: 0; }
 
 .btn {
-  display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px;
-  border-radius: 999px; font-weight: 700; font-size: 1rem; text-decoration: none;
-  border: 2px solid transparent; cursor: pointer; font-family: var(--font-body);
-  transition: transform .2s, background .2s, color .2s;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 26px;
+  border-radius: var(--r); font-family: var(--font); font-weight: 700; font-size: .86rem;
+  letter-spacing: .07em; text-transform: uppercase; text-decoration: none; cursor: pointer;
+  border: 1px solid transparent; transition: background .2s, border-color .2s, color .2s, transform .2s;
 }
-.btn:hover { transform: translateY(-2px); }
+.btn svg { transition: transform .2s; }
+.btn:hover svg { transform: translate(2px, -2px); }
 .btn-primary { background: var(--accent); color: var(--accent-ink); }
-.btn-ghost { border-color: currentColor; background: transparent; }
+.btn-primary:hover { background: color-mix(in srgb, var(--accent) 88%, #fff); }
+.btn-outline { border-color: var(--line); color: var(--ink); background: transparent; }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+.btn-sm { padding: 11px 18px; font-size: .78rem; }
 
 /* ---------- Loading screen ---------- */
 #loader {
-  position: fixed; inset: 0; z-index: 100; background: var(--dark); color: var(--on-dark);
+  position: fixed; inset: 0; z-index: 100; background: #0f0c0a; color: #f3ece3;
   display: grid; place-items: center; transition: opacity .6s ease, visibility .6s;
 }
 #loader.done { opacity: 0; visibility: hidden; }
-.loader-inner { display: grid; justify-items: center; gap: 18px; text-align: center; }
-.loader-inner .mark { width: 72px; height: 72px; }
-.loader-name { font-family: var(--font-display); font-weight: var(--display-weight); font-size: 1.6rem; }
-.loader-bar { width: 180px; height: 6px; border-radius: 99px; background: rgba(255,255,255,.14); overflow: hidden; }
-.loader-bar span {
-  display: block; height: 100%; width: 0; border-radius: inherit;
-  background: repeating-linear-gradient(90deg, var(--wood-1) 0 10px, var(--wood-2) 10px 14px);
-  animation: fill 1.3s ease forwards;
-}
+.loader-inner { display: grid; justify-items: center; gap: 16px; }
+.loader-inner .mark { width: 54px; height: 54px; color: var(--accent); }
+.loader-name { font-weight: 800; font-size: 1.15rem; letter-spacing: .14em; text-transform: uppercase; }
+.loader-inner .meta { color: #a8998a; }
+.loader-bar { width: 160px; height: 1px; background: rgba(255,255,255,.15); overflow: hidden; margin-top: 6px; }
+.loader-bar span { display: block; height: 100%; width: 0; background: var(--accent); animation: fill 1.2s ease forwards; }
 @keyframes fill { to { width: 100%; } }
 
 /* ---------- Header ---------- */
 header.site {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
-  background: color-mix(in srgb, var(--bg) 92%, transparent);
-  backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
 }
-.nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 72px; }
-.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.logo .mark { width: 42px; height: 42px; flex: none; }
-.logo-text { display: grid; line-height: 1.05; }
-.logo-text strong { font-family: var(--font-display); font-weight: var(--display-weight); font-size: 1.2rem; }
-.logo-text small { font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
-.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
-.nav-links a { text-decoration: none; font-weight: 600; font-size: .97rem; }
-.nav-links a:not(.btn):hover { color: var(--accent); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.logo .mark { width: 38px; height: 38px; flex: none; color: var(--accent); }
+.logo-text { display: grid; gap: 3px; line-height: 1; }
+.logo-text strong { font-weight: 800; font-size: 1.02rem; letter-spacing: .12em; text-transform: uppercase; }
+.logo-text small { font-family: var(--mono); font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.nav-right { display: flex; align-items: center; gap: 28px; }
+.nav-links { display: flex; align-items: center; gap: 30px; list-style: none; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; font-weight: 600; font-size: .95rem; color: var(--ink); opacity: .85; transition: color .2s, opacity .2s; }
+.nav-links a:hover { color: var(--accent); opacity: 1; }
+.nav-divider { width: 1px; height: 28px; background: var(--line); }
 .menu-btn { display: none; background: none; border: 0; color: var(--ink); padding: 8px; cursor: pointer; }
-@media (max-width: 860px) {
+@media (max-width: 960px) {
   .menu-btn { display: block; }
+  .nav-divider, .nav-right > .btn { display: none; }
   .nav-links {
-    position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: flex-start; gap: 4px;
+    position: absolute; top: 76px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0;
     background: var(--bg); border-bottom: 1px solid var(--line);
-    padding: 12px max(20px, env(safe-area-inset-right, 0px)) 20px max(20px, env(safe-area-inset-left, 0px));
+    padding: 8px max(20px, env(safe-area-inset-right, 0px)) 16px max(20px, env(safe-area-inset-left, 0px));
     display: none;
   }
   .nav-links.open { display: flex; }
-  .nav-links a { display: block; padding: 8px 0; }
+  .nav-links a { display: block; padding: 12px 0; border-bottom: 1px solid var(--line); }
 }
 
-/* ---------- Photo placeholders (wood grain until real photos go in) ---------- */
+/* ---------- Photo placeholders (until real photos go in) ---------- */
 .photo {
-  position: relative; overflow: hidden; border-radius: var(--radius); background-color: var(--wood-2);
+  position: relative; overflow: hidden; background-color: var(--ph-2);
   background-image:
     var(--img, none),
-    repeating-linear-gradient(97deg, rgba(0,0,0,0) 0 18px, rgba(0,0,0,.05) 18px 20px, rgba(0,0,0,0) 20px 31px, rgba(255,255,255,.05) 31px 33px),
-    radial-gradient(ellipse 60% 18% at 30% 40%, rgba(0,0,0,.07), transparent 70%),
-    linear-gradient(135deg, var(--wood-1), var(--wood-2));
+    repeating-linear-gradient(96deg, rgba(0,0,0,0) 0 22px, rgba(0,0,0,.06) 22px 23px, rgba(0,0,0,0) 23px 41px, rgba(255,255,255,.035) 41px 42px),
+    linear-gradient(150deg, var(--ph-1), var(--ph-2));
   background-size: cover; background-position: center;
 }
-.photo .tag {
-  position: absolute; left: 12px; bottom: 12px; display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(20,14,9,.55); color: #fff7ec; font-size: .78rem; font-weight: 700;
-  padding: 5px 10px; border-radius: 99px;
+.photo .ph {
+  position: absolute; inset: 0; display: grid; place-items: center; align-content: center; gap: 8px;
+  color: rgba(255,255,255,.5); font-family: var(--mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
 }
-.photo[style*="--img"] .tag { display: none; }
+.photo[style*="--img"] .ph { display: none; }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; color: var(--on-photo); padding: 0; }
-.hero-slides { position: absolute; inset: 0; }
-.hero-slides .photo { position: absolute; inset: 0; border-radius: 0; opacity: 0; transition: opacity 1.2s ease; }
-.hero-slides .photo.active { opacity: 1; }
-.hero-slides .photo .tag { left: auto; right: 16px; bottom: 16px; }
-.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(22,14,8,.78) 0%, rgba(22,14,8,.45) 55%, rgba(22,14,8,.15) 100%); pointer-events: none; }
-.hero-content { position: relative; z-index: 1; padding-block: clamp(90px, 14vw, 170px); display: grid; gap: 22px; max-width: 640px; }
-.hero h1 { font-size: clamp(2.5rem, 6vw, 4.3rem); }
-.hero p.lead { font-size: 1.15rem; max-width: 520px; opacity: .92; }
-.hero .eyebrow { color: var(--wood-1); }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
-.hero-dots { display: flex; gap: 8px; margin-top: 18px; }
-.hero-dots button { width: 34px; height: 5px; border-radius: 99px; border: 0; background: rgba(255,255,255,.35); cursor: pointer; padding: 0; }
-.hero-dots button.active { background: var(--on-photo); }
+.hero { position: relative; color: var(--on-photo); border-bottom: 1px solid var(--line); overflow: hidden; background: #0f0c0a; }
+.hero-bg { position: absolute; inset: 0; }
+.hero-bg .ph { display: none; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12,9,7,.94) 0%, rgba(12,9,7,.82) 45%, rgba(12,9,7,.55) 100%); }
+.hero-grid {
+  position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center;
+  padding-block: clamp(48px, 10vw, 130px);
+}
+.hero-copy { display: grid; gap: 26px; min-width: 0; }
+.hero { --accent: var(--accent-dark-bg); --accent-ink: #1a120b; }
+.hero .chip.plain { color: var(--on-photo-muted); border-color: rgba(255,255,255,.16); }
+.badges { display: flex; flex-wrap: wrap; gap: 10px; }
+.hero h1 { font-size: clamp(2.7rem, 6.4vw, 5rem); }
+.hero .lead { font-size: 1.15rem; color: var(--on-photo-muted); max-width: 54ch; }
+.stats { display: flex; flex-wrap: wrap; gap: 18px 44px; padding-top: 4px; }
+.stat strong { display: block; font-size: 1.85rem; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; }
+.stat span { font-family: var(--mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--on-photo-muted); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero .btn-outline { color: var(--on-photo); border-color: rgba(255,255,255,.22); }
+.hero .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
-.trust { background: var(--dark); color: var(--on-dark); padding-block: 22px; }
-.trust ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px 30px; }
-.trust li { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: .97rem; }
-.trust svg { color: var(--wood-1); flex: none; }
+.feature { display: grid; gap: 14px; min-width: 0; }
+.feature-frame { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 60px rgba(0,0,0,.45); aspect-ratio: 4 / 3.4; max-width: 100%; }
+.feature-frame .photo { position: absolute; inset: 0; opacity: 0; transition: opacity .9s ease; }
+.feature-frame .photo.active { opacity: 1; }
+.frame-caption { position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 2; display: flex; justify-content: space-between; gap: 10px; }
+.frame-caption span { font-family: var(--mono); font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; background: rgba(12,9,7,.72); color: var(--on-photo); padding: 7px 10px; border-radius: var(--r-sm); backdrop-filter: blur(6px); }
+.thumbs { display: flex; justify-content: flex-end; gap: 10px; }
+.thumbs button { width: 84px; aspect-ratio: 4 / 3; padding: 0; border-radius: var(--r); overflow: hidden; border: 2px solid transparent; cursor: pointer; opacity: .55; transition: opacity .2s, border-color .2s; background: none; }
+.thumbs button .photo { width: 100%; height: 100%; }
+.thumbs button .ph { display: none; }
+.thumbs button.active { opacity: 1; border-color: var(--accent); }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } .thumbs { justify-content: flex-start; } }
 
 /* ---------- Services ---------- */
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; }
-.service { background: var(--surface); border-radius: var(--radius); padding: 28px; display: grid; gap: 12px; align-content: start; }
-.service .icon { width: 50px; height: 50px; border-radius: 12px; display: grid; place-items: center; background: var(--bg); color: var(--accent); }
-.service p { color: var(--muted); font-size: .97rem; }
-
-/* ---------- Previous jobs ---------- */
-#work { background: var(--band); }
-.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
-.filters button {
-  font: inherit; font-weight: 700; font-size: .92rem; padding: 8px 18px; border-radius: 99px; cursor: pointer;
-  border: 1.5px solid var(--line); background: var(--bg); color: var(--ink);
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.service {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 30px;
+  display: grid; gap: 14px; align-content: start; transition: border-color .25s, transform .25s;
 }
-.filters button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
-.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 18px; }
-.job { display: grid; gap: 10px; margin: 0; }
-.job .photo { aspect-ratio: 4 / 3; max-width: 100%; }
-.job figcaption strong { display: block; font-size: 1.02rem; line-height: 1.3; }
-@media (max-width: 560px) { .gallery { grid-template-columns: 1fr 1fr; gap: 14px; } .job figcaption span { font-size: .8rem; } }
-.job figcaption span { color: var(--muted); font-size: .9rem; }
+.service:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); transform: translateY(-3px); }
+.service .icon { color: var(--accent); }
+.service p { color: var(--muted); font-size: .97rem; }
+.service ul { list-style: none; margin: 4px 0 0; padding: 16px 0 0; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+.service li { display: flex; gap: 10px; align-items: center; font-size: .92rem; }
+.service li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex: none; }
+.timbers { margin-top: 36px; padding: 20px 24px; border: 1px solid var(--line); border-radius: var(--r-lg); display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: center; }
+.timbers .label { color: var(--muted); }
+.timbers ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 26px; font-weight: 700; }
+
+/* ---------- Previous work ---------- */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filters button {
+  font-family: var(--font); font-weight: 600; font-size: .9rem; padding: 9px 16px; border-radius: var(--r); cursor: pointer;
+  border: 1px solid var(--line); background: var(--surface); color: var(--muted); transition: color .2s, border-color .2s;
+}
+.filters button:hover { color: var(--ink); }
+.filters button[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 22px; }
+.job { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; display: grid; grid-template-rows: auto 1fr; transition: border-color .25s; }
+.job:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
+.job .photo { aspect-ratio: 4 / 3; max-width: 100%; transition: transform .6s ease; }
+.job:hover .photo { transform: scale(1.03); }
+.job .media { position: relative; overflow: hidden; }
+.job .media .chip { position: absolute; top: 14px; left: 14px; z-index: 1; background: rgba(12,9,7,.75); color: var(--on-photo); border-color: rgba(255,255,255,.14); }
+.job figcaption { padding: 22px 24px 26px; display: grid; gap: 10px; align-content: start; }
+.job .meta { display: flex; gap: 18px; align-items: center; }
+.job .meta span { display: inline-flex; gap: 6px; align-items: center; }
+.job figcaption p { color: var(--muted); font-size: .95rem; }
 .job[hidden] { display: none; }
 
 /* ---------- About ---------- */
-.about { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 6vw, 72px); align-items: center; }
-.about .photo { aspect-ratio: 4 / 5; max-width: 100%; }
-.about-text { display: grid; gap: 18px; min-width: 0; }
-.about-text p { color: var(--muted); max-width: 60ch; }
-.checks { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 10px; }
-.checks li { display: flex; gap: 10px; align-items: flex-start; font-weight: 600; }
-.checks svg { color: var(--accent-2); flex: none; margin-top: 4px; }
-.signoff { font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); font-style: italic; }
-@media (max-width: 820px) { .about { grid-template-columns: 1fr; } .about .photo { aspect-ratio: 4 / 3; } }
+.about { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(36px, 6vw, 80px); align-items: center; }
+.about-media { position: relative; }
+.about-media .photo { aspect-ratio: 4 / 5; border-radius: var(--r-lg); border: 1px solid var(--line); max-width: 100%; }
+.about-card {
+  position: absolute; right: -16px; bottom: 28px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-lg); padding: 18px 22px; box-shadow: 0 20px 40px rgba(0,0,0,.25); display: grid; gap: 2px;
+}
+.about-card strong { font-size: 1.9rem; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; }
+.about-text { display: grid; gap: 20px; min-width: 0; }
+.about-text > p { color: var(--muted); max-width: 60ch; }
+.creds { list-style: none; padding: 0; margin: 8px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--line); }
+.creds li { padding: 16px 0; border-bottom: 1px solid var(--line); display: grid; gap: 2px; padding-right: 16px; }
+.creds strong { font-size: .98rem; }
+.creds span { color: var(--muted); font-size: .9rem; }
+@media (max-width: 860px) { .about { grid-template-columns: 1fr; } .about-media .photo { aspect-ratio: 4 / 3; } .about-card { right: 16px; } }
+@media (max-width: 520px) { .creds { grid-template-columns: 1fr; } }
 
 /* ---------- Free quotation ---------- */
-.quote { background: var(--dark); color: var(--on-dark); }
-.quote-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: center; }
-.quote .eyebrow { color: var(--wood-1); }
-.quote h2 { margin-top: 10px; }
-.quote p.lead { opacity: .85; margin-top: 14px; max-width: 46ch; }
-.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: step; }
-.steps li {
-  display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: start;
-  background: rgba(255,255,255,.06); border-radius: var(--radius); padding: 18px 20px;
+.quote-panel {
+  border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(28px, 5vw, 56px);
+  background: linear-gradient(120deg, color-mix(in srgb, var(--accent) 9%, var(--surface)) 0%, var(--surface) 60%);
+  display: grid; grid-template-columns: 1.3fr auto; gap: 28px 48px; align-items: center;
 }
-.steps li::before {
-  counter-increment: step; content: counter(step);
-  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--wood-1); color: #2a1c11; font-weight: 800; font-family: var(--font-display); font-size: 1.15rem;
-}
-.steps strong { display: block; font-size: 1.05rem; }
-.steps span { opacity: .8; font-size: .95rem; }
-.quote .btn { margin-top: 26px; }
-@media (max-width: 820px) { .quote-inner { grid-template-columns: 1fr; } }
+.quote-panel .text { display: grid; gap: 16px; min-width: 0; }
+.quote-panel .text .chip { justify-self: start; }
+.quote-panel p { color: var(--muted); font-size: 1.05rem; max-width: 56ch; }
+.steps { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.steps li { border-top: 1px solid var(--line); padding-top: 20px; display: grid; gap: 6px; align-content: start; }
+.steps .label { color: var(--muted); }
+.steps strong { font-size: 1.05rem; }
+.steps span { color: var(--muted); font-size: .95rem; }
+@media (max-width: 820px) { .quote-panel { grid-template-columns: 1fr; } .steps { grid-template-columns: 1fr; } }
 
-/* ---------- Reviews (moving strip) ---------- */
+/* ---------- Reviews ---------- */
 #reviews { overflow: hidden; }
-.example-note { justify-self: start; display: inline-block; font-size: .8rem; font-weight: 700; color: var(--muted); background: var(--surface); padding: 4px 12px; border-radius: 99px; }
-.marquee { display: flex; gap: 20px; width: max-content; animation: scroll 50s linear infinite; }
+.rating {
+  display: flex; align-items: center; gap: 14px; padding: 14px 18px; border: 1px solid var(--line); border-radius: var(--r-lg);
+  background: var(--surface); text-decoration: none; color: var(--ink);
+}
+.rating strong { font-size: 1.3rem; letter-spacing: -.02em; }
+.rating .stars { font-size: .95rem; }
+.stars { color: var(--accent); letter-spacing: 3px; }
+.marquee { display: flex; gap: 20px; width: max-content; animation: scroll 60s linear infinite; padding-block: 4px; }
 .marquee:hover { animation-play-state: paused; }
 @keyframes scroll { to { transform: translateX(calc(-50% - 10px)); } }
-.review { width: min(360px, 80vw); flex: none; background: var(--surface); border-radius: var(--radius); padding: 26px; display: grid; gap: 14px; align-content: start; }
-.stars { color: var(--accent-2); letter-spacing: 2px; font-size: 1.05rem; }
-.review blockquote { margin: 0; font-size: 1rem; }
-.review footer { font-weight: 700; font-size: .92rem; }
-.review footer span { display: block; font-weight: 500; color: var(--muted); }
-.marquee-mask { -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.review { width: min(390px, 82vw); flex: none; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 26px; display: grid; gap: 14px; align-content: start; }
+.review header { display: flex; align-items: center; gap: 12px; }
+.avatar { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; background: color-mix(in srgb, var(--accent) 18%, var(--surface)); color: var(--accent); flex: none; }
+.review header strong { display: block; font-size: .98rem; line-height: 1.2; }
+.review blockquote { margin: 0; color: var(--muted); font-size: .97rem; }
+.marquee-mask { -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.reviews-foot { display: flex; justify-content: center; margin-top: 36px; }
 
 /* ---------- Contact ---------- */
-#contact { background: var(--band); }
-.contact { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(32px, 6vw, 64px); }
-.contact-info { display: grid; gap: 22px; align-content: start; min-width: 0; }
-.info-row { display: flex; gap: 14px; align-items: flex-start; }
-.info-row .icon { width: 44px; height: 44px; flex: none; border-radius: 12px; background: var(--bg); color: var(--accent); display: grid; place-items: center; }
-.info-row small { display: block; color: var(--muted); font-weight: 700; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
-.info-row strong { font-size: 1.05rem; overflow-wrap: anywhere; }
+.contact { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(36px, 6vw, 72px); }
+.contact-info { display: grid; gap: 28px; align-content: start; min-width: 0; }
+.contact-info .section-head { margin-bottom: 0; }
+.info-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.info-list li { display: flex; gap: 16px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.info-list svg { color: var(--accent); flex: none; }
+.info-list .meta { display: block; text-transform: uppercase; letter-spacing: .14em; font-size: .66rem; }
+.info-list strong { font-size: 1.02rem; overflow-wrap: anywhere; }
 .socials { display: flex; gap: 10px; flex-wrap: wrap; }
-.socials a { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); transition: transform .2s; }
-.socials a:hover { transform: translateY(-2px); }
-form.card { background: var(--bg); border-radius: var(--radius); padding: clamp(22px, 4vw, 36px); display: grid; gap: 16px; min-width: 0; }
-.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.socials a { width: 42px; height: 42px; border-radius: var(--r); display: grid; place-items: center; border: 1px solid var(--line); color: var(--ink); transition: color .2s, border-color .2s; }
+.socials a:hover { color: var(--accent); border-color: var(--accent); }
+form.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(24px, 4vw, 40px); display: grid; gap: 18px; min-width: 0; align-content: start; }
+form.card h3 { font-size: 1.4rem; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 @media (max-width: 560px) { .row2 { grid-template-columns: 1fr; } }
-label { display: grid; gap: 6px; font-weight: 700; font-size: .9rem; }
+label { display: grid; gap: 8px; font-family: var(--mono); font-size: .68rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 input, select, textarea {
-  font: inherit; font-weight: 500; color: var(--ink); background: var(--surface);
-  border: 1.5px solid var(--line); border-radius: 10px; padding: 11px 14px; width: 100%;
+  font-family: var(--font); font-size: 1rem; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: var(--r); padding: 13px 14px; width: 100%;
+  transition: border-color .2s;
 }
 input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); }
-textarea { min-height: 120px; resize: vertical; }
-.form-msg { font-weight: 700; color: var(--accent-2); }
-@media (max-width: 820px) { .contact { grid-template-columns: 1fr; } }
+textarea { min-height: 130px; resize: vertical; }
+.form-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+.form-msg { font-weight: 600; color: var(--accent); }
+@media (max-width: 860px) { .contact { grid-template-columns: 1fr; } }
 
 /* ---------- Footer ---------- */
-footer.site { background: var(--dark); color: var(--on-dark); padding-block: 40px; }
-.foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
-footer.site .logo-text small { color: var(--on-dark); opacity: .65; }
-footer.site .socials a { background: rgba(255,255,255,.1); color: var(--on-dark); }
-.copy { font-size: .88rem; opacity: .7; }
+footer.site { border-top: 1px solid var(--line); background: var(--surface); padding-block: 56px 28px; }
+.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 36px; }
+.foot-grid p { color: var(--muted); font-size: .95rem; max-width: 34ch; margin-top: 16px; }
+.foot-grid h4 { margin: 0 0 14px; }
+.foot-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.foot-grid ul a { text-decoration: none; color: var(--muted); }
+.foot-grid ul a:hover { color: var(--accent); }
+.foot-bottom { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+@media (max-width: 820px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .foot-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Preview panel (for choosing options — remove before going live) ---------- */
 #picker {
   position: fixed; z-index: 90; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-  background: #fffdf9; color: #2a211a; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,.25);
-  width: min(300px, calc(100vw - 32px)); font-family: "Nunito", system-ui, sans-serif; font-size: 14px;
+  background: #fffdf9; color: #2a211a; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,.35);
+  width: min(290px, calc(100vw - 32px)); font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-size: 13.5px;
 }
 #picker summary { list-style: none; cursor: pointer; padding: 12px 16px; font-weight: 800; display: flex; justify-content: space-between; align-items: center; }
 #picker summary::-webkit-details-marker { display: none; }
 #picker[open] summary { border-bottom: 1px solid #eadfcf; }
 #picker .body { padding: 14px 16px 16px; display: grid; gap: 14px; }
-#picker h4 { margin: 0 0 8px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #7a6a5a; }
-.swatches { display: grid; gap: 6px; }
+#picker h4 { margin: 0 0 8px; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: #7a6a5a; }
+.swatches, .fonts { display: grid; gap: 6px; }
 .swatches button, .fonts button {
   display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; cursor: pointer;
-  border: 1.5px solid #eadfcf; background: #fff; color: #2a211a; border-radius: 10px; padding: 7px 10px; font: inherit; font-weight: 700;
+  border: 1px solid #e7ddcf; background: #fff; color: #2a211a; border-radius: 8px; padding: 7px 10px; font: inherit; font-weight: 700;
 }
-.swatches button[aria-pressed="true"], .fonts button[aria-pressed="true"] { border-color: #2a211a; }
+.swatches button[aria-pressed="true"], .fonts button[aria-pressed="true"] { border-color: #2a211a; box-shadow: inset 0 0 0 1px #2a211a; }
 .chips { display: flex; flex: none; }
 .chips i { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #fff; margin-left: -5px; }
 .chips i:first-child { margin-left: 0; }
-.fonts { display: grid; gap: 6px; }
-.fonts button span { font-size: 18px; }
+.fonts button span { font-size: 17px; font-weight: 800; width: 26px; }
 #picker .hint { font-size: 12px; color: #7a6a5a; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -323,20 +373,20 @@ footer.site .socials a { background: rgba(255,255,255,.1); color: var(--on-dark)
 </head>
 <body>
 
-<!-- Logo mark: a rounded square with a "T" cut like a timber joint and grain lines -->
+<!-- Logo mark: outlined square with a timber "T" (simple enough to work on vans, invoices and social icons) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="mark" viewBox="0 0 64 64">
-    <rect x="2" y="2" width="60" height="60" rx="16" fill="var(--accent)"/>
-    <path d="M10 46c10-3 18 3 28 0s12-4 16-3" stroke="var(--accent-ink)" stroke-opacity=".25" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path d="M10 53c10-3 18 3 28 0s12-4 16-3" stroke="var(--accent-ink)" stroke-opacity=".18" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path d="M16 15h32a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3H37v18a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3V25H16a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3z" fill="var(--accent-ink)"/>
+  <symbol id="mark" viewBox="0 0 48 48">
+    <rect x="2" y="2" width="44" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M13 13h22v6h-8v16h-6V19h-8z" fill="currentColor"/>
+    <path d="M13 38h22" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".45"/>
   </symbol>
 </svg>
 
 <div id="loader" role="status" aria-label="Loading">
   <div class="loader-inner">
     <svg class="mark" aria-hidden="true"><use href="#mark"/></svg>
-    <div class="loader-name">Tom Tennant Carpentry</div>
+    <div class="loader-name">Tom Tennant</div>
+    <div class="meta">Carpentry · Joinery</div>
     <div class="loader-bar"><span></span></div>
   </div>
 </div>
@@ -345,128 +395,172 @@ footer.site .socials a { background: rgba(255,255,255,.1); color: var(--on-dark)
   <div class="wrap nav">
     <a class="logo" href="#top" aria-label="Tom Tennant Carpentry, home">
       <svg class="mark" aria-hidden="true"><use href="#mark"/></svg>
-      <span class="logo-text"><strong>Tom Tennant</strong><small>Carpentry &amp; Joinery</small></span>
+      <span class="logo-text"><strong>Tom Tennant</strong><small>Carpentry · Joinery</small></span>
     </a>
-    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#work">Previous work</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a class="btn btn-primary" href="#quote">Free quote</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <a class="btn btn-outline btn-sm" href="#contact">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        Request a quote
+      </a>
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- HERO: rotating photos. Add real photos with style="--img:url(images/your-photo.jpg)" -->
+  <!-- HERO. Add real photos with style="--img:url(images/your-photo.jpg)" on each .photo -->
   <section class="hero" aria-label="Introduction">
-    <div class="hero-slides">
-      <div class="photo active"><span class="tag">Photo: finished kitchen</span></div>
-      <div class="photo"><span class="tag">Photo: oak staircase</span></div>
-      <div class="photo"><span class="tag">Photo: fitted wardrobes</span></div>
-    </div>
-    <div class="wrap">
-      <div class="hero-content">
-        <span class="eyebrow">Local carpenter &amp; joiner</span>
-        <h1>Quality joinery, built to last.</h1>
-        <p class="lead">From kitchens and staircases to doors, floors and fitted furniture, Tom brings careful, tidy workmanship to every job, big or small.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#quote">Request a free quote</a>
-          <a class="btn btn-ghost" href="#work">See previous work</a>
+    <div class="hero-bg photo"><span class="ph"></span></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="badges">
+          <span class="chip">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>
+            Fully insured
+          </span>
+          <span class="chip plain">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            [Town] · [County]
+          </span>
         </div>
-        <div class="hero-dots" role="group" aria-label="Choose photo">
-          <button class="active" aria-label="Photo 1"></button>
-          <button aria-label="Photo 2"></button>
-          <button aria-label="Photo 3"></button>
+        <span class="label">Bespoke carpentry &amp; joinery</span>
+        <h1>Made to measure.<br><span class="accent">Built to last.</span></h1>
+        <p class="lead">Kitchens, staircases, doors and fitted furniture, measured, made and installed by one craftsman from first visit to final fit.</p>
+        <div class="stats">
+          <div class="stat"><strong>XX+</strong><span>Years' experience</span></div>
+          <div class="stat"><strong>Fixed</strong><span>Price quotes</span></div>
+          <div class="stat"><strong>Free</strong><span>Site visit</span></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Request a free quote
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+          <a class="btn btn-outline" href="#work">View projects</a>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-frame">
+          <div class="photo active" data-title="Shaker kitchen" data-year="2025"><span class="ph"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Project photo</span></div>
+          <div class="photo" data-title="Oak staircase" data-year="2025"><span class="ph"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Project photo</span></div>
+          <div class="photo" data-title="Fitted wardrobes" data-year="2024"><span class="ph"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Project photo</span></div>
+          <div class="frame-caption"><span id="frame-title">Shaker kitchen</span><span id="frame-year">2025</span></div>
+        </div>
+        <div class="thumbs" role="group" aria-label="Choose featured project">
+          <button class="active" aria-label="Show Shaker kitchen"><div class="photo"><span class="ph"></span></div></button>
+          <button aria-label="Show Oak staircase"><div class="photo"><span class="ph"></span></div></button>
+          <button aria-label="Show Fitted wardrobes"><div class="photo"><span class="ph"></span></div></button>
         </div>
       </div>
     </div>
   </section>
-
-  <div class="trust">
-    <div class="wrap">
-      <ul>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Fully insured</li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>Free, no-obligation quotes</li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>XX years' experience</li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Covering [Your Town] &amp; surrounding areas</li>
-      </ul>
-    </div>
-  </div>
 
   <!-- SERVICES -->
   <section id="services">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">What I do</span>
-        <h2>Carpentry and joinery for your home</h2>
-        <p>Every job is measured, made and fitted with care. If you don't see what you need, just ask.</p>
+        <span class="label">Services</span>
+        <h2>Carpentry for every room <span class="accent">in the house.</span></h2>
+        <p>Every job is measured on site, built to fit and finished properly, whether it's a single door or a full kitchen.</p>
       </div>
       <div class="services-grid">
         <article class="service">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M12 10v10M8 7h.01M16 7h.01"/></svg></div>
+          <svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h18M12 10v10M8 7h.01M16 7h.01"/></svg>
           <h3>Kitchens</h3>
-          <p>Full kitchen fitting, worktops, cabinet doors and bespoke storage.</p>
+          <p>Complete kitchen installations and upgrades, fitted square and level.</p>
+          <ul><li>Full kitchen fitting</li><li>Solid wood worktops</li><li>Replacement doors &amp; storage</li></ul>
         </article>
         <article class="service">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 20h5v-5h5v-5h5V5h3"/></svg></div>
+          <svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 20h5v-5h5v-5h5V5h3"/></svg>
           <h3>Staircases</h3>
-          <p>New staircases, spindles, handrails and banister renovations.</p>
+          <p>New staircases and renovations that make a statement in the hallway.</p>
+          <ul><li>Oak &amp; softwood staircases</li><li>Spindles &amp; handrails</li><li>Glass balustrade conversions</li></ul>
         </article>
         <article class="service">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M15 12h.01"/></svg></div>
+          <svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M15 12h.01"/></svg>
           <h3>Doors &amp; windows</h3>
-          <p>Internal and external doors hung, frames, skirting and architrave.</p>
+          <p>Doors hung to close cleanly, with tidy frames and trims.</p>
+          <ul><li>Internal &amp; external doors</li><li>Frames &amp; linings</li><li>Skirting &amp; architrave</li></ul>
         </article>
         <article class="service">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M12 3v18M9 11v2M15 11v2"/></svg></div>
+          <svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1.5"/><path d="M12 3v18M9 11v2M15 11v2"/></svg>
           <h3>Fitted furniture</h3>
-          <p>Made-to-measure wardrobes, alcove units, shelving and media walls.</p>
+          <p>Storage built around your room, not off the shelf.</p>
+          <ul><li>Fitted wardrobes</li><li>Alcove units &amp; shelving</li><li>Media walls</li></ul>
         </article>
         <article class="service">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 8h18M3 13h18M3 18h18M9 8v5M15 13v5M7 18v3M17 3v5"/></svg></div>
+          <svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 8h18M3 13h18M3 18h18M9 8v5M15 13v5M7 18v3M17 3v5"/></svg>
           <h3>Flooring</h3>
-          <p>Solid wood, engineered and laminate floors laid neatly and level.</p>
+          <p>Floors laid flat, tight and finished with clean edges.</p>
+          <ul><li>Solid &amp; engineered wood</li><li>Laminate &amp; LVT</li><li>Herringbone patterns</li></ul>
         </article>
         <article class="service">
-          <div class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 10h18M3 15h18M5 10v10M19 10v10M12 15v5M3 10l9-6 9 6"/></svg></div>
-          <h3>Decking &amp; garden</h3>
-          <p>Decking, fencing, pergolas and garden rooms that stand up to the weather.</p>
+          <svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 10h18M3 15h18M5 10v10M19 10v10M12 15v5M3 10l9-6 9 6"/></svg>
+          <h3>Decking &amp; outdoor</h3>
+          <p>Outdoor timberwork built to handle the British weather.</p>
+          <ul><li>Decking &amp; steps</li><li>Pergolas &amp; fencing</li><li>Garden rooms &amp; sheds</li></ul>
         </article>
+      </div>
+      <div class="timbers">
+        <span class="label">Timbers I work with</span>
+        <ul><li>Oak</li><li>Ash</li><li>Walnut</li><li>Sapele</li><li>Douglas fir</li><li>Redwood</li></ul>
       </div>
     </div>
   </section>
 
-  <!-- PREVIOUS JOBS -->
+  <!-- PREVIOUS WORK -->
   <section id="work">
     <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Previous work</span>
-        <h2>A few recent jobs</h2>
-        <p>Have a look through some of the work I've done for customers around the area.</p>
-      </div>
-      <div class="filters" role="group" aria-label="Filter jobs">
-        <button aria-pressed="true" data-filter="all">All</button>
-        <button aria-pressed="false" data-filter="kitchens">Kitchens</button>
-        <button aria-pressed="false" data-filter="stairs">Staircases</button>
-        <button aria-pressed="false" data-filter="doors">Doors</button>
-        <button aria-pressed="false" data-filter="furniture">Fitted furniture</button>
-        <button aria-pressed="false" data-filter="outdoor">Outdoor</button>
+      <div class="head-row">
+        <div class="section-head">
+          <span class="label">Recent projects</span>
+          <h2>Previous <span class="accent">work.</span></h2>
+          <p>A selection of recent jobs for homeowners across [Town] and the surrounding area.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button aria-pressed="true" data-filter="all">All projects</button>
+          <button aria-pressed="false" data-filter="kitchens">Kitchens</button>
+          <button aria-pressed="false" data-filter="stairs">Staircases</button>
+          <button aria-pressed="false" data-filter="furniture">Fitted furniture</button>
+          <button aria-pressed="false" data-filter="outdoor">Outdoor</button>
+        </div>
       </div>
       <div class="gallery">
-        <figure class="job" data-cat="kitchens"><div class="photo"><span class="tag">Photo</span></div><figcaption><strong>Shaker-style kitchen</strong><span>Kitchen fit · [Town]</span></figcaption></figure>
-        <figure class="job" data-cat="stairs"><div class="photo"><span class="tag">Photo</span></div><figcaption><strong>Oak staircase refurbishment</strong><span>Staircase · [Town]</span></figcaption></figure>
-        <figure class="job" data-cat="furniture"><div class="photo"><span class="tag">Photo</span></div><figcaption><strong>Alcove cupboards &amp; shelves</strong><span>Fitted furniture · [Town]</span></figcaption></figure>
-        <figure class="job" data-cat="doors"><div class="photo"><span class="tag">Photo</span></div><figcaption><strong>Oak internal doors</strong><span>Doors · [Town]</span></figcaption></figure>
-        <figure class="job" data-cat="outdoor"><div class="photo"><span class="tag">Photo</span></div><figcaption><strong>Raised garden decking</strong><span>Outdoor · [Town]</span></figcaption></figure>
-        <figure class="job" data-cat="kitchens"><div class="photo"><span class="tag">Photo</span></div><figcaption><strong>Solid wood worktops</strong><span>Kitchen · [Town]</span></figcaption></figure>
-        <figure class="job" data-cat="furniture"><div class="photo"><span class="tag">Photo</span></div><figcaption><strong>Built-in wardrobes</strong><span>Fitted furniture · [Town]</span></figcaption></figure>
-        <figure class="job" data-cat="outdoor"><div class="photo"><span class="tag">Photo</span></div><figcaption><strong>Garden pergola</strong><span>Outdoor · [Town]</span></figcaption></figure>
+        <figure class="job" data-cat="kitchens">
+          <div class="media"><span class="chip">Kitchen</span><div class="photo"><span class="ph">Project photo</span></div></div>
+          <figcaption><div class="meta"><span>◉ [Town]</span><span>2025</span></div><h3>Shaker-style kitchen</h3><p>Full kitchen fit with painted Shaker doors and solid oak worktops.</p></figcaption>
+        </figure>
+        <figure class="job" data-cat="stairs">
+          <div class="media"><span class="chip">Staircase</span><div class="photo"><span class="ph">Project photo</span></div></div>
+          <figcaption><div class="meta"><span>◉ [Town]</span><span>2025</span></div><h3>Oak staircase refurbishment</h3><p>New oak treads, handrail and spindles fitted over the existing structure.</p></figcaption>
+        </figure>
+        <figure class="job" data-cat="furniture">
+          <div class="media"><span class="chip">Fitted furniture</span><div class="photo"><span class="ph">Project photo</span></div></div>
+          <figcaption><div class="meta"><span>◉ [Town]</span><span>2024</span></div><h3>Alcove cupboards &amp; shelving</h3><p>Made-to-measure units either side of the chimney breast.</p></figcaption>
+        </figure>
+        <figure class="job" data-cat="furniture">
+          <div class="media"><span class="chip">Fitted furniture</span><div class="photo"><span class="ph">Project photo</span></div></div>
+          <figcaption><div class="meta"><span>◉ [Town]</span><span>2024</span></div><h3>Built-in wardrobes</h3><p>Floor-to-ceiling wardrobes with soft-close doors and internal drawers.</p></figcaption>
+        </figure>
+        <figure class="job" data-cat="outdoor">
+          <div class="media"><span class="chip">Outdoor</span><div class="photo"><span class="ph">Project photo</span></div></div>
+          <figcaption><div class="meta"><span>◉ [Town]</span><span>2024</span></div><h3>Raised garden decking</h3><p>Two-level hardwood deck with steps and an integrated planter.</p></figcaption>
+        </figure>
+        <figure class="job" data-cat="kitchens">
+          <div class="media"><span class="chip">Kitchen</span><div class="photo"><span class="ph">Project photo</span></div></div>
+          <figcaption><div class="meta"><span>◉ [Town]</span><span>2024</span></div><h3>Walnut breakfast bar</h3><p>Solid walnut worktop and breakfast bar added to an existing kitchen.</p></figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -474,35 +568,42 @@ footer.site .socials a { background: rgba(255,255,255,.1); color: var(--on-dark)
   <!-- ABOUT -->
   <section id="about">
     <div class="wrap about">
-      <div class="photo"><span class="tag">Photo: Tom at work</span></div>
+      <div class="about-media">
+        <div class="photo"><span class="ph">Photo of Tom</span></div>
+        <div class="about-card"><strong>XX+</strong><span class="meta">Years in the trade</span></div>
+      </div>
       <div class="about-text">
-        <span class="eyebrow">About Tom</span>
-        <h2>Hi, I'm Tom.</h2>
-        <p>I've been working with wood for [XX] years, starting as an apprentice and now running my own business. I take on every job myself, so you deal with the same person from the first visit to the final clean-up.</p>
-        <p>I care about getting the details right: tight joints, clean lines and leaving your home as tidy as I found it.</p>
-        <ul class="checks">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>[Qualification, e.g. NVQ Level 3 Site Carpentry]</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Fully insured, public liability cover</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Clear, fixed quotes with no hidden extras</li>
+        <span class="label">About</span>
+        <h2>One craftsman, <span class="accent">start to finish.</span></h2>
+        <p>I'm Tom Tennant, a carpenter and joiner based in [Town]. I started as an apprentice [XX] years ago and now run my own business, taking on every job myself.</p>
+        <p>That means you deal with the same person from the first visit to the final fit. I take pride in tight joints, clean lines and leaving your home as tidy as I found it.</p>
+        <ul class="creds">
+          <li><strong>[NVQ Level 3]</strong><span>Site carpentry</span></li>
+          <li><strong>Fully insured</strong><span>Public liability cover</span></li>
+          <li><strong>Fixed quotes</strong><span>No hidden extras</span></li>
+          <li><strong>Clean &amp; tidy</strong><span>Dust sheets down, mess removed</span></li>
         </ul>
-        <p class="signoff">Tom Tennant</p>
       </div>
     </div>
   </section>
 
   <!-- FREE QUOTATION -->
-  <section class="quote" id="quote">
-    <div class="wrap quote-inner">
-      <div>
-        <span class="eyebrow">Free quotation</span>
-        <h2>Got a job in mind? Get a free quote.</h2>
-        <p class="lead">No pressure and no obligation. Tell me what you're after and I'll get back to you, usually within a day or two.</p>
-        <a class="btn btn-primary" href="#contact">Request a free quote</a>
+  <section id="quote">
+    <div class="wrap">
+      <div class="quote-panel">
+        <div class="text">
+          <span class="chip">Free quotation</span>
+          <h2>Have a project in mind?</h2>
+          <p>Book a free, no-obligation visit. I'll measure up, talk through options and send you a clear written price.</p>
+        </div>
+        <a class="btn btn-primary" href="#contact">Request a free quote
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
       </div>
       <ol class="steps">
-        <li><div><strong>Get in touch</strong><span>Send a message or give me a call with a few details about the job.</span></div></li>
-        <li><div><strong>I'll come and measure up</strong><span>A quick visit to see the space and talk through what you want.</span></div></li>
-        <li><div><strong>You get a clear, fixed price</strong><span>A written quote with everything included, so there are no surprises.</span></div></li>
+        <li><span class="label">Step 1</span><strong>Get in touch</strong><span>Call or send a message with a few details about the job.</span></li>
+        <li><span class="label">Step 2</span><strong>Site visit</strong><span>I come out, measure up and talk through what you want.</span></li>
+        <li><span class="label">Step 3</span><strong>Fixed written quote</strong><span>A clear price with everything included, so there are no surprises.</span></li>
       </ol>
     </div>
   </section>
@@ -510,20 +611,30 @@ footer.site .socials a { background: rgba(255,255,255,.1); color: var(--on-dark)
   <!-- REVIEWS -->
   <section id="reviews">
     <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Customer reviews</span>
-        <h2>What customers say</h2>
-        <span class="example-note">Example reviews. Real customer reviews will go here.</span>
+      <div class="head-row">
+        <div class="section-head">
+          <span class="label">Customer reviews · Example text</span>
+          <h2>What customers <span class="accent">say.</span></h2>
+        </div>
+        <a class="rating" href="https://www.google.com/maps" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 5v5h-5"/></svg>
+          <span><span class="stars">★★★★★</span><span class="meta" style="display:block">Google reviews link goes here</span></span>
+        </a>
       </div>
     </div>
     <div class="marquee-mask">
       <div class="marquee" id="marquee">
-        <article class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Tom fitted our new kitchen and it looks fantastic. Turned up on time every day and left everything spotless."</blockquote><footer>Example customer<span>Kitchen fit</span></footer></article>
-        <article class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Really happy with our new staircase. Great attention to detail and a fair price."</blockquote><footer>Example customer<span>Staircase</span></footer></article>
-        <article class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"The alcove units are exactly what we wanted. Tom had some great ideas for the space."</blockquote><footer>Example customer<span>Fitted furniture</span></footer></article>
-        <article class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Hung eight doors for us in a day and a half. Friendly, tidy and would definitely use again."</blockquote><footer>Example customer<span>Internal doors</span></footer></article>
-        <article class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Our decking has transformed the garden. Solid work and good communication throughout."</blockquote><footer>Example customer<span>Decking</span></footer></article>
+        <article class="review"><header><span class="avatar">A</span><div><strong>Example customer</strong><span class="meta">Kitchen fit</span></div></header><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Tom fitted our new kitchen and the finish is superb. On time every day and left everything spotless."</blockquote></article>
+        <article class="review"><header><span class="avatar">B</span><div><strong>Example customer</strong><span class="meta">Staircase</span></div></header><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Really happy with our new staircase. Great attention to detail and exactly the price he quoted."</blockquote></article>
+        <article class="review"><header><span class="avatar">C</span><div><strong>Example customer</strong><span class="meta">Fitted furniture</span></div></header><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"The alcove units are exactly what we wanted. Tom had some great ideas for making the most of the space."</blockquote></article>
+        <article class="review"><header><span class="avatar">D</span><div><strong>Example customer</strong><span class="meta">Internal doors</span></div></header><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Hung eight oak doors in a day and a half. Friendly, tidy and we'd definitely use him again."</blockquote></article>
+        <article class="review"><header><span class="avatar">E</span><div><strong>Example customer</strong><span class="meta">Decking</span></div></header><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Our decking has transformed the garden. Solid work and good communication throughout."</blockquote></article>
       </div>
+    </div>
+    <div class="wrap reviews-foot">
+      <a class="btn btn-outline btn-sm" href="https://www.google.com/maps" target="_blank" rel="noopener">See all reviews on Google
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
     </div>
   </section>
 
@@ -531,40 +642,44 @@ footer.site .socials a { background: rgba(255,255,255,.1); color: var(--on-dark)
   <section id="contact">
     <div class="wrap contact">
       <div class="contact-info">
-        <div class="section-head" style="margin-bottom:8px">
-          <span class="eyebrow">Contact</span>
-          <h2>Let's talk about your project</h2>
-          <p>Call, email or fill in the form and I'll get back to you as soon as I can.</p>
+        <div class="section-head">
+          <span class="label">Contact</span>
+          <h2>Let's talk about <span class="accent">your project.</span></h2>
+          <p>Call, email or use the form. I usually reply within one working day.</p>
         </div>
-        <div class="info-row"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><div><small>Phone</small><strong>07XXX XXXXXX</strong></div></div>
-        <div class="info-row"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><small>Email</small><strong>[your email address]</strong></div></div>
-        <div class="info-row"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><small>Areas covered</small><strong>[Your Town] and surrounding areas</strong></div></div>
-        <div class="info-row"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><small>Hours</small><strong>Mon–Fri 8am–5pm, Sat by arrangement</strong></div></div>
-        <div>
-          <small style="display:block;color:var(--muted);font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px">Follow my work</small>
-          <div class="socials">
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.2V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-            <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.4 1.8 4 4 4.2v3.3c-1.5 0-2.9-.4-4-1.2v6.4A5.7 5.7 0 1 1 10.3 10v3.4a2.4 2.4 0 1 0 2.4 2.3V3z"/></svg></a>
-          </div>
+        <ul class="info-list">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><span class="meta">Phone</span><strong>07XXX XXXXXX</strong></div></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><span class="meta">Email</span><strong>[your email address]</strong></div></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><span class="meta">Areas covered</span><strong>[Town] and within [XX] miles</strong></div></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><span class="meta">Hours</span><strong>Mon–Fri 8:00–17:00 · Sat by arrangement</strong></div></li>
+        </ul>
+        <div class="socials" aria-label="Social media">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.2V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.4 1.8 4 4 4.2v3.3c-1.5 0-2.9-.4-4-1.2v6.4A5.7 5.7 0 1 1 10.3 10v3.4a2.4 2.4 0 1 0 2.4 2.3V3z"/></svg></a>
         </div>
       </div>
 
       <form class="card" id="quote-form" novalidate>
         <h3>Request a free quotation</h3>
         <div class="row2">
-          <label for="f-name">Your name<input id="f-name" name="name" autocomplete="name" required></label>
-          <label for="f-phone">Phone number<input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
+          <label for="f-name">Name<input id="f-name" name="name" autocomplete="name" required></label>
+          <label for="f-phone">Phone<input id="f-phone" name="phone" type="tel" autocomplete="tel"></label>
         </div>
         <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
-        <label for="f-type">Type of job
+        <label for="f-type">Type of work
           <select id="f-type" name="type">
             <option>Kitchen</option><option>Staircase</option><option>Doors &amp; windows</option>
-            <option>Fitted furniture</option><option>Flooring</option><option>Decking &amp; garden</option><option>Something else</option>
+            <option>Fitted furniture</option><option>Flooring</option><option>Decking &amp; outdoor</option><option>Something else</option>
           </select>
         </label>
-        <label for="f-msg">Tell me about the job<textarea id="f-msg" name="message" placeholder="Rough size, materials, timescale…"></textarea></label>
-        <div><button class="btn btn-primary" type="submit">Send request</button></div>
+        <label for="f-msg">Project details<textarea id="f-msg" name="message" placeholder="Rough size, timber or finish, ideal start date…"></textarea></label>
+        <div class="form-foot">
+          <button class="btn btn-primary" type="submit">Send request
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </button>
+          <span class="meta">Free · No obligation</span>
+        </div>
         <p class="form-msg" id="form-msg" hidden></p>
       </form>
     </div>
@@ -572,17 +687,32 @@ footer.site .socials a { background: rgba(255,255,255,.1); color: var(--on-dark)
 </main>
 
 <footer class="site">
-  <div class="wrap foot">
-    <a class="logo" href="#top" aria-label="Back to top">
-      <svg class="mark" aria-hidden="true"><use href="#mark"/></svg>
-      <span class="logo-text"><strong>Tom Tennant</strong><small>Carpentry &amp; Joinery</small></span>
-    </a>
-    <div class="socials">
-      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.2V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-      <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.4 1.8 4 4 4.2v3.3c-1.5 0-2.9-.4-4-1.2v6.4A5.7 5.7 0 1 1 10.3 10v3.4a2.4 2.4 0 1 0 2.4 2.3V3z"/></svg></a>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top" aria-label="Back to top">
+          <svg class="mark" aria-hidden="true"><use href="#mark"/></svg>
+          <span class="logo-text"><strong>Tom Tennant</strong><small>Carpentry · Joinery</small></span>
+        </a>
+        <p>Bespoke carpentry and joinery for homes across [Town] and the surrounding area.</p>
+      </div>
+      <div>
+        <h4 class="label">Services</h4>
+        <ul><li><a href="#services">Kitchens</a></li><li><a href="#services">Staircases</a></li><li><a href="#services">Fitted furniture</a></li><li><a href="#services">Decking &amp; outdoor</a></li></ul>
+      </div>
+      <div>
+        <h4 class="label">Company</h4>
+        <ul><li><a href="#work">Projects</a></li><li><a href="#about">About</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4 class="label">Follow</h4>
+        <ul><li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li></ul>
+      </div>
     </div>
-    <p class="copy">© <span id="year">2026</span> Tom Tennant Carpentry. All rights reserved.</p>
+    <div class="foot-bottom">
+      <span class="meta">© <span id="year">2026</span> Tom Tennant Carpentry</span>
+      <span class="meta">Fully insured · Free quotations</span>
+    </div>
   </div>
 </footer>
 
@@ -593,19 +723,19 @@ footer.site .socials a { background: rgba(255,255,255,.1); color: var(--on-dark)
     <div>
       <h4>Colour scheme</h4>
       <div class="swatches" id="swatches">
-        <button data-palette="oak" aria-pressed="true"><span class="chips"><i style="background:#f6efe4"></i><i style="background:#c9a273"></i><i style="background:#8b5a2b"></i><i style="background:#5f7150"></i></span>Light Oak</button>
-        <button data-palette="walnut" aria-pressed="false"><span class="chips"><i style="background:#241912"></i><i style="background:#6b4a32"></i><i style="background:#d0904f"></i><i style="background:#9db08a"></i></span>Dark Walnut</button>
-        <button data-palette="pine" aria-pressed="false"><span class="chips"><i style="background:#f1f2ea"></i><i style="background:#d2b384"></i><i style="background:#2f5b3c"></i><i style="background:#b07a43"></i></span>Pine &amp; Forest</button>
-        <button data-palette="cedar" aria-pressed="false"><span class="chips"><i style="background:#f8eee7"></i><i style="background:#c98e66"></i><i style="background:#a24d2c"></i><i style="background:#3f5a5c"></i></span>Red Cedar</button>
-        <button data-palette="ash" aria-pressed="false"><span class="chips"><i style="background:#f3f1ed"></i><i style="background:#d9cbb4"></i><i style="background:#3d3a36"></i><i style="background:#9a7b55"></i></span>Ash &amp; Charcoal</button>
+        <button data-palette="walnut" aria-pressed="true"><span class="chips"><i style="background:#13100d"></i><i style="background:#3a2b1f"></i><i style="background:#d6a86f"></i></span>Dark Walnut</button>
+        <button data-palette="charcoal" aria-pressed="false"><span class="chips"><i style="background:#121314"></i><i style="background:#3b352d"></i><i style="background:#c9b089"></i></span>Charcoal &amp; Ash</button>
+        <button data-palette="oak" aria-pressed="false"><span class="chips"><i style="background:#faf7f2"></i><i style="background:#cdb291"></i><i style="background:#95602f"></i></span>Light Oak</button>
+        <button data-palette="pine" aria-pressed="false"><span class="chips"><i style="background:#f6f7f3"></i><i style="background:#c9b693"></i><i style="background:#2e5a3b"></i></span>Pine &amp; Forest</button>
+        <button data-palette="cedar" aria-pressed="false"><span class="chips"><i style="background:#fbf6f2"></i><i style="background:#c99a78"></i><i style="background:#9c4626"></i></span>Red Cedar</button>
       </div>
     </div>
     <div>
       <h4>Font</h4>
       <div class="fonts" id="fonts">
-        <button data-font="fraunces" aria-pressed="true"><span style="font-family:'Fraunces',serif;font-weight:600">Aa</span>Fraunces + Nunito</button>
-        <button data-font="nunito" aria-pressed="false"><span style="font-family:'Nunito',sans-serif;font-weight:800">Aa</span>Nunito (rounded)</button>
-        <button data-font="quicksand" aria-pressed="false"><span style="font-family:'Quicksand',sans-serif;font-weight:700">Aa</span>Quicksand + Nunito</button>
+        <button data-font="jakarta" aria-pressed="true"><span style="font-family:'Plus Jakarta Sans',sans-serif">Aa</span>Plus Jakarta Sans</button>
+        <button data-font="manrope" aria-pressed="false"><span style="font-family:'Manrope',sans-serif">Aa</span>Manrope</button>
+        <button data-font="outfit" aria-pressed="false"><span style="font-family:'Outfit',sans-serif">Aa</span>Outfit (roundest)</button>
       </div>
     </div>
     <p class="hint">Preview only. This panel gets removed once you've picked.</p>
@@ -616,11 +746,11 @@ footer.site .socials a { background: rgba(255,255,255,.1); color: var(--on-dark)
 (function () {
   var root = document.documentElement;
 
-  // Loading screen: hide shortly after the page is ready
+  // Loading screen
   var loader = document.getElementById('loader');
-  function hideLoader() { setTimeout(function () { loader.classList.add('done'); }, 1300); }
+  function hideLoader() { setTimeout(function () { loader.classList.add('done'); }, 1200); }
   if (document.readyState === 'complete') hideLoader(); else window.addEventListener('load', hideLoader);
-  setTimeout(function () { loader.classList.add('done'); }, 4000); // safety net
+  setTimeout(function () { loader.classList.add('done'); }, 4000);
 
   // Mobile menu
   var menuBtn = document.getElementById('menu-btn');
@@ -633,20 +763,24 @@ footer.site .socials a { background: rgba(255,255,255,.1); color: var(--on-dark)
     if (e.target.tagName === 'A') { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
   });
 
-  // Hero slideshow
-  var slides = document.querySelectorAll('.hero-slides .photo');
-  var dots = document.querySelectorAll('.hero-dots button');
+  // Hero featured project: rotates, or pick with the thumbnails
+  var slides = document.querySelectorAll('.feature-frame .photo');
+  var thumbs = document.querySelectorAll('.thumbs button');
+  var title = document.getElementById('frame-title'), year = document.getElementById('frame-year');
   var current = 0, timer;
+  // Thumbnails reuse the same photo as their slide
+  thumbs.forEach(function (t, i) { var s = slides[i].getAttribute('style'); if (s) t.querySelector('.photo').setAttribute('style', s); });
   function show(i) {
-    slides[current].classList.remove('active'); dots[current].classList.remove('active');
+    slides[current].classList.remove('active'); thumbs[current].classList.remove('active');
     current = i;
-    slides[current].classList.add('active'); dots[current].classList.add('active');
+    slides[current].classList.add('active'); thumbs[current].classList.add('active');
+    title.textContent = slides[current].dataset.title; year.textContent = slides[current].dataset.year;
   }
-  function start() { timer = setInterval(function () { show((current + 1) % slides.length); }, 5000); }
-  dots.forEach(function (d, i) { d.addEventListener('click', function () { clearInterval(timer); show(i); start(); }); });
+  function start() { timer = setInterval(function () { show((current + 1) % slides.length); }, 5500); }
+  thumbs.forEach(function (t, i) { t.addEventListener('click', function () { clearInterval(timer); show(i); start(); }); });
   start();
 
-  // Previous work filter
+  // Project filter
   var filterBtns = document.querySelectorAll('.filters button');
   var jobs = document.querySelectorAll('.job');
   filterBtns.forEach(function (b) {
@@ -676,23 +810,21 @@ footer.site .socials a { background: rgba(255,255,255,.1); color: var(--on-dark)
     msg.hidden = false;
   });
 
-  // Keep the style panel folded on small screens so it doesn't cover the page
-  if (window.innerWidth < 700) document.getElementById('picker').removeAttribute('open');
-
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Preview panel: colour scheme and font switcher
+  // Preview panel
+  if (window.innerWidth < 700) document.getElementById('picker').removeAttribute('open');
   function setChoice(groupId, attr, value) {
     root.setAttribute('data-' + attr, value);
     document.querySelectorAll('#' + groupId + ' button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset[attr] === value); });
-    try { localStorage.setItem('ttc-' + attr, value); } catch (err) {}
+    try { localStorage.setItem('ttc2-' + attr, value); } catch (err) {}
   }
   document.querySelectorAll('#swatches button').forEach(function (b) { b.addEventListener('click', function () { setChoice('swatches', 'palette', b.dataset.palette); }); });
   document.querySelectorAll('#fonts button').forEach(function (b) { b.addEventListener('click', function () { setChoice('fonts', 'font', b.dataset.font); }); });
   try {
-    var p = localStorage.getItem('ttc-palette'), f = localStorage.getItem('ttc-font');
-    if (p) setChoice('swatches', 'palette', p);
-    if (f) setChoice('fonts', 'font', f);
+    var p = localStorage.getItem('ttc2-palette'), f = localStorage.getItem('ttc2-font');
+    if (p && document.querySelector('#swatches [data-palette="' + p + '"]')) setChoice('swatches', 'palette', p);
+    if (f && document.querySelector('#fonts [data-font="' + f + '"]')) setChoice('fonts', 'font', f);
   } catch (err) {}
 })();
 </script>

@@ -3,17 +3,17 @@
 A simple one-page website for Tom Tennant Carpentry. Open `index.html` in a browser to view it.
 
 ## Choosing a style
-A **"Try a style"** panel sits in the bottom-right corner. It switches between 5 wood-themed colour schemes and 3 friendly fonts:
+A **"Try a style"** panel sits in the bottom-right corner. It switches between 5 wood-themed colour schemes and 3 fonts:
 
 | Colour scheme | Feel |
 |---|---|
-| Light Oak | Warm pale oak, brown accents, sage green |
-| Dark Walnut | Dark and rich, copper accents |
-| Pine & Forest | Pale pine with forest green |
-| Red Cedar | Warm reddish timber tones |
-| Ash & Charcoal | Pale ash with charcoal, more modern |
+| Dark Walnut (default) | Near-black with a warm oak/brass accent |
+| Charcoal & Ash | Neutral dark grey with a pale ash accent |
+| Light Oak | Off-white with an oak-brown accent |
+| Pine & Forest | Off-white with a forest-green accent |
+| Red Cedar | Off-white with a cedar-red accent |
 
-Fonts: Fraunces + Nunito (soft serif headings), Nunito (rounded all over), Quicksand + Nunito (light and round).
+Fonts: Plus Jakarta Sans (default), Manrope, Outfit (the roundest). Small labels use IBM Plex Mono.
 
 Once a choice is made: set `data-palette` and `data-font` on the `<html>` tag, then delete the `#picker` block and the unused palettes.
 
