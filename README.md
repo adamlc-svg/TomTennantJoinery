@@ -1,31 +1,19 @@
 # Tom Tennant Carpentry
 
-A simple one-page website for Tom Tennant Carpentry. Open `index.html` in a browser to view it.
+One-page website for Tom Tennant Carpentry, a carpenter and joiner in Hull, East Yorkshire. Open `index.html` in a browser to view it. Photos and the logo are in `images/`.
 
-## Choosing a style
-A **"Try a style"** panel sits in the bottom-right corner. It switches between 5 wood-themed colour schemes and 3 fonts:
+All details on the site come from Tom's answers in `tom-answers.txt`.
 
-| Colour scheme | Feel |
-|---|---|
-| Dark Walnut (default) | Near-black with a warm oak/brass accent |
-| Charcoal & Ash | Neutral dark grey with a pale ash accent |
-| Light Oak | Off-white with an oak-brown accent |
-| Pine & Forest | Off-white with a forest-green accent |
-| Red Cedar | Off-white with a cedar-red accent |
+## Still to do
+- **Facebook link:** it currently points to facebook.com/tomtenantjoinery (as given, with one N). Check the exact link with Tom.
+- **Reviews:** the reviews section is hidden until Tom has real reviews (Google Business profile recommended).
+- **Photo of Tom:** the About section uses a timber roof photo until there is one.
+- **Website address:** none yet. tomtennantcarpentry.co.uk is worth checking.
+- **Style panel:** the "Try a style" box (bottom right) is for choosing colours and fonts. Remove the `#picker` block once decided.
 
-Fonts: Plus Jakarta Sans (default), Manrope, Outfit (the roundest). Small labels use IBM Plex Mono.
+## Adding or swapping photos
+Put the photo in `images/` and set it on a box, e.g.
+`<div class="photo" style="--img:url(images/new-job.jpg)"></div>`
 
-Once a choice is made: set `data-palette` and `data-font` on the `<html>` tag, then delete the `#picker` block and the unused palettes.
-
-## Adding photos
-Every grey-brown wood-grain box is a photo placeholder. Put the photo in `images/`, then add it to the box, e.g.
-
-```html
-<div class="photo" style="--img:url(images/kitchen-1.jpg)"><span class="tag">Photo</span></div>
-```
-
-The "Photo" label hides itself automatically once an image is set.
-
-## Still to fill in
-Anything in `[square brackets]` or shown as `XX`: town, years of experience, qualifications, phone, email, social media links (currently point to the sites' home pages) and real customer reviews (the current ones are marked as examples).
-The quote form is not connected to an inbox yet. A service such as Formspree or Netlify Forms can do this later.
+## Quote form
+There's no server, so pressing "Send request" opens the visitor's email app with their details filled in, addressed to tomtennantcarpentry@gmail.com.
