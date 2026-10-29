@@ -6,7 +6,6 @@ All details on the site come from Tom's answers in `tom-answers.txt`. Colours: D
 
 ## Still to do
 - **Reviews:** the reviews section is hidden until Tom has real reviews (Google Business profile recommended).
-- **Photo of Tom:** the About section uses a timber roof photo until there is one.
 - **Website address:** none yet. tomtennantcarpentry.co.uk is worth checking.
 
 ## Adding or swapping photos

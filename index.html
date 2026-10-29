@@ -236,6 +236,7 @@ header.site {
 /* ---------- About ---------- */
 .about { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(36px, 6vw, 80px); align-items: center; }
 .about-media { position: relative; }
+.tom-photo { background-position: 34% center; }
 .about-media .photo { aspect-ratio: 4 / 5; border-radius: var(--r-lg); border: 1px solid var(--line); max-width: 100%; }
 .about-card {
   position: absolute; right: -16px; bottom: 28px; background: var(--surface); border: 1px solid var(--line);
@@ -249,7 +250,7 @@ header.site {
 .creds li { padding: 16px 0; border-bottom: 1px solid var(--line); display: grid; gap: 2px; padding-right: 16px; }
 .creds strong { font-size: .98rem; }
 .creds span { color: var(--muted); font-size: .9rem; }
-@media (max-width: 860px) { .about { grid-template-columns: 1fr; } .about-media .photo { aspect-ratio: 4 / 3; } .about-card { right: 16px; } }
+@media (max-width: 860px) { .about { grid-template-columns: 1fr; } .about-media { display: grid; gap: 12px; } .about-media .photo { aspect-ratio: 1 / 1; } .about-card { position: static; box-shadow: none; display: flex; align-items: baseline; gap: 12px; } }
 @media (max-width: 520px) { .creds { grid-template-columns: 1fr; } }
 
 /* ---------- Free quotation ---------- */
@@ -590,7 +591,7 @@ footer.site { border-top: 1px solid var(--line); background: var(--surface); pad
   <section id="about">
     <div class="wrap about">
       <div class="about-media">
-        <div class="photo" style="--img:url(images/gazebo-roof.jpg)"><span class="ph">Photo of Tom</span></div>
+        <div class="photo tom-photo" role="img" aria-label="Tom Tennant" style="--img:url(images/tom.jpg)"></div>
         <div class="about-card"><strong>9</strong><span class="meta">Years in the trade</span></div>
       </div>
       <div class="about-text">
