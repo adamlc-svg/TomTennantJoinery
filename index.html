@@ -363,6 +363,22 @@ footer.site { border-top: 1px solid var(--line); background: var(--surface); pad
   html { scroll-behavior: auto; }
   .marquee { animation: none; width: auto; overflow-x: auto; }
 }
+/* Phones: tighter spacing, quote steps folded away, short footer */
+@media (max-width: 600px) {
+  section { padding-block: 52px; }
+  .section-head { margin-bottom: 28px; }
+  .head-row { margin-bottom: 24px; gap: 18px; }
+  .ba { margin-top: 40px; }
+  .steps { display: none; }
+  footer.site { padding-block: 32px 22px; }
+  .foot-grid { grid-template-columns: 1fr; gap: 18px; }
+  .foot-grid > div:nth-child(2), .foot-grid > div:nth-child(3) { display: none; }
+  .foot-grid > div:first-child p { display: none; }
+  .foot-logo { width: 120px; margin-top: 14px; }
+  .foot-grid ul { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .foot-grid h4 { display: none; }
+  .foot-bottom { margin-top: 22px; padding-top: 16px; }
+}
 </style>
 </head>
 <body>
