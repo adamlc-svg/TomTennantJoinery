@@ -232,6 +232,17 @@ header.site {
 .ba-grid .photo { aspect-ratio: 3 / 4; max-height: 520px; width: 100%; border-radius: var(--r-lg); border: 1px solid var(--line); }
 .ba-grid figcaption { position: absolute; top: 14px; left: 14px; background: rgba(12,9,7,.75); }
 @media (max-width: 560px) { .ba-grid { gap: 10px; } }
+/* Phones: projects two across with short captions, so the section isn't a long scroll */
+@media (max-width: 600px) {
+  .gallery { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .gallery .job:first-child:not([hidden]) { grid-column: span 2; }
+  .job { border-radius: var(--r); }
+  .job .media .chip { top: 8px; left: 8px; padding: 4px 7px; font-size: .58rem; letter-spacing: .06em; }
+  .job figcaption { padding: 10px 12px 12px; gap: 4px; }
+  .job figcaption h3 { font-size: .9rem; line-height: 1.25; }
+  .job .meta, .job figcaption p { display: none; }
+  .gallery .job:first-child figcaption p { display: block; font-size: .85rem; }
+}
 
 /* ---------- About ---------- */
 .about { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(36px, 6vw, 80px); align-items: center; }
